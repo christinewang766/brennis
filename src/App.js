@@ -5,6 +5,8 @@ import Brennis from "./images/brennis.png";
 import HBD from "./images/hbd.gif";
 import X from "./images/x.png";
 import Note from "./images/note.png";
+import JSConfetti from "js-confetti";
+import { motion } from "framer-motion";
 
 import Friendly from "./images/friendly.png";
 import Social from "./images/social.png";
@@ -40,6 +42,8 @@ function App() {
   const handleClose = () => {
     setOpen(false);
   };
+
+  const jsConfetti = new JSConfetti();
 
   return (
     <>
@@ -79,10 +83,13 @@ function App() {
                 handleOpen("Brandon", "The friendly face 🤠", "Christy");
               }}
             >
-              <img
+              <motion.img
+                whileHover={{ scale: 1.2 }}
+                whileTap={{ scale: 0.9 }}
+                transition={{ type: "spring", stiffness: 400, damping: 17 }}
                 src={Friendly}
                 style={{
-                  height: "100px",
+                  height: "90px",
                 }}
                 alt="friendly"
               />
@@ -96,10 +103,14 @@ function App() {
                 );
               }}
             >
-              <img
+              {" "}
+              <motion.img
+                whileHover={{ scale: 1.2 }}
+                whileTap={{ scale: 0.9 }}
+                transition={{ type: "spring", stiffness: 400, damping: 17 }}
                 src={Social}
                 style={{
-                  height: "100px",
+                  height: "90px",
                 }}
                 alt="social"
               />
@@ -113,10 +124,14 @@ function App() {
                 );
               }}
             >
-              <img
+              {" "}
+              <motion.img
+                whileHover={{ scale: 1.2 }}
+                whileTap={{ scale: 0.9 }}
+                transition={{ type: "spring", stiffness: 400, damping: 17 }}
                 src={Positive}
                 style={{
-                  height: "100px",
+                  height: "90px",
                 }}
                 alt="positive"
               />
@@ -130,10 +145,14 @@ function App() {
                 );
               }}
             >
-              <img
+              {" "}
+              <motion.img
+                whileHover={{ scale: 1.2 }}
+                whileTap={{ scale: 0.9 }}
+                transition={{ type: "spring", stiffness: 400, damping: 17 }}
                 src={Laugh}
                 style={{
-                  height: "100px",
+                  height: "90px",
                 }}
                 alt="laugh"
               />
@@ -143,10 +162,14 @@ function App() {
                 handleOpen("Brandon", "Insanely good smiles.", "Christopher");
               }}
             >
-              <img
+              {" "}
+              <motion.img
+                whileHover={{ scale: 1.2 }}
+                whileTap={{ scale: 0.9 }}
+                transition={{ type: "spring", stiffness: 400, damping: 17 }}
                 src={Teeth}
                 style={{
-                  height: "100px",
+                  height: "90px",
                 }}
                 alt="teeth"
               />
@@ -160,10 +183,14 @@ function App() {
                 );
               }}
             >
-              <img
+              {" "}
+              <motion.img
+                whileHover={{ scale: 1.2 }}
+                whileTap={{ scale: 0.9 }}
+                transition={{ type: "spring", stiffness: 400, damping: 17 }}
                 src={Lead}
                 style={{
-                  height: "100px",
+                  height: "90px",
                 }}
                 alt="lead"
               />
@@ -177,10 +204,14 @@ function App() {
                 );
               }}
             >
-              <img
+              {" "}
+              <motion.img
+                whileHover={{ scale: 1.2 }}
+                whileTap={{ scale: 0.9 }}
+                transition={{ type: "spring", stiffness: 400, damping: 17 }}
                 src={Kacey}
                 style={{
-                  height: "100px",
+                  height: "90px",
                 }}
                 alt="kacey"
               />
@@ -190,10 +221,14 @@ function App() {
                 handleOpen("Brandon", "He's jacked", "Ed");
               }}
             >
-              <img
+              {" "}
+              <motion.img
+                whileHover={{ scale: 1.2 }}
+                whileTap={{ scale: 0.9 }}
+                transition={{ type: "spring", stiffness: 400, damping: 17 }}
                 src={Jacked}
                 style={{
-                  height: "100px",
+                  height: "90px",
                 }}
                 alt="jacked"
               />
@@ -207,10 +242,14 @@ function App() {
                 );
               }}
             >
-              <img
+              {" "}
+              <motion.img
+                whileHover={{ scale: 1.2 }}
+                whileTap={{ scale: 0.9 }}
+                transition={{ type: "spring", stiffness: 400, damping: 17 }}
                 src={Yap}
                 style={{
-                  height: "100px",
+                  height: "90px",
                 }}
                 alt="yap"
               />
@@ -227,13 +266,26 @@ function App() {
               gap: "40px",
             }}
           >
-            <img
-              src={Brennis}
-              style={{
-                height: "400px",
+            <button
+              onClick={() => {
+                jsConfetti.addConfetti({
+                  emojis: ["🌈", "✨", "🎂", "🥳", "🎉", "🎁"],
+                  emojiSize: 70,
+                });
               }}
-              alt="brennis"
-            />
+            >
+              {" "}
+              <motion.img
+                whileHover={{ scale: 1.2 }}
+                whileTap={{ scale: 0.9 }}
+                transition={{ type: "spring", stiffness: 400, damping: 17 }}
+                src={Brennis}
+                style={{
+                  height: "400px",
+                }}
+                alt="brennis"
+              />
+            </button>
             <img
               src={HBD}
               style={{
@@ -258,10 +310,14 @@ function App() {
                 handleOpen("Dennis", "The grandpa vibe 👴🏼", "Christy");
               }}
             >
-              <img
+              {" "}
+              <motion.img
+                whileHover={{ scale: 1.2 }}
+                whileTap={{ scale: 0.9 }}
+                transition={{ type: "spring", stiffness: 400, damping: 17 }}
                 src={Grandpa}
                 style={{
-                  height: "100px",
+                  height: "90px",
                 }}
                 alt="grandpa"
               />
@@ -275,10 +331,14 @@ function App() {
                 );
               }}
             >
-              <img
+              {" "}
+              <motion.img
+                whileHover={{ scale: 1.2 }}
+                whileTap={{ scale: 0.9 }}
+                transition={{ type: "spring", stiffness: 400, damping: 17 }}
                 src={Nice}
                 style={{
-                  height: "100px",
+                  height: "90px",
                 }}
                 alt="nice"
               />
@@ -292,10 +352,14 @@ function App() {
                 );
               }}
             >
-              <img
+              {" "}
+              <motion.img
+                whileHover={{ scale: 1.2 }}
+                whileTap={{ scale: 0.9 }}
+                transition={{ type: "spring", stiffness: 400, damping: 17 }}
                 src={Frog}
                 style={{
-                  height: "100px",
+                  height: "90px",
                 }}
                 alt="frog"
               />
@@ -309,10 +373,14 @@ function App() {
                 );
               }}
             >
-              <img
+              {" "}
+              <motion.img
+                whileHover={{ scale: 1.2 }}
+                whileTap={{ scale: 0.9 }}
+                transition={{ type: "spring", stiffness: 400, damping: 17 }}
                 src={Adobo}
                 style={{
-                  height: "100px",
+                  height: "90px",
                 }}
                 alt="adobo"
               />
@@ -326,10 +394,14 @@ function App() {
                 );
               }}
             >
-              <img
+              {" "}
+              <motion.img
+                whileHover={{ scale: 1.2 }}
+                whileTap={{ scale: 0.9 }}
+                transition={{ type: "spring", stiffness: 400, damping: 17 }}
                 src={Strength}
                 style={{
-                  height: "100px",
+                  height: "90px",
                 }}
                 alt="strength"
               />
@@ -343,10 +415,14 @@ function App() {
                 );
               }}
             >
-              <img
+              {" "}
+              <motion.img
+                whileHover={{ scale: 1.2 }}
+                whileTap={{ scale: 0.9 }}
+                transition={{ type: "spring", stiffness: 400, damping: 17 }}
                 src={Music}
                 style={{
-                  height: "100px",
+                  height: "90px",
                 }}
                 alt="music"
               />
@@ -360,10 +436,13 @@ function App() {
                 );
               }}
             >
-              <img
+              <motion.img
+                whileHover={{ scale: 1.2 }}
+                whileTap={{ scale: 0.9 }}
+                transition={{ type: "spring", stiffness: 400, damping: 17 }}
                 src={Chicken}
                 style={{
-                  height: "100px",
+                  height: "90px",
                 }}
                 alt="chicken"
               />
@@ -373,10 +452,14 @@ function App() {
                 handleOpen("Dennis", "He's jacked", "Ed");
               }}
             >
-              <img
+              {" "}
+              <motion.img
+                whileHover={{ scale: 1.2 }}
+                whileTap={{ scale: 0.9 }}
+                transition={{ type: "spring", stiffness: 400, damping: 17 }}
                 src={Jacked}
                 style={{
-                  height: "100px",
+                  height: "90px",
                 }}
                 alt="jacked"
               />
@@ -390,10 +473,14 @@ function App() {
                 );
               }}
             >
-              <img
+              {" "}
+              <motion.img
+                whileHover={{ scale: 1.2 }}
+                whileTap={{ scale: 0.9 }}
+                transition={{ type: "spring", stiffness: 400, damping: 17 }}
                 src={Trust}
                 style={{
-                  height: "100px",
+                  height: "90px",
                 }}
                 alt="trust"
               />
@@ -417,7 +504,10 @@ function App() {
             <div>
               <div style={{ position: "absolute", top: "160px", right: "0px" }}>
                 <button onClick={handleClose}>
-                  <img
+                  <motion.img
+                    whileHover={{ scale: 1.2 }}
+                    whileTap={{ scale: 0.9 }}
+                    transition={{ type: "spring", stiffness: 400, damping: 17 }}
                     src={X}
                     style={{
                       height: "100px",
