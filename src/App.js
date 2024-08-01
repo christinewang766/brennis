@@ -25,6 +25,10 @@ import Music from "./images/music.png";
 import Chicken from "./images/chicken.png";
 import Strength from "./images/strength.png";
 import Trust from "./images/trust.png";
+import Soothe from "./images/soothe.png";
+import Joke from "./images/joke.png";
+import Cheeto from "./images/cheeto.png";
+import Chef from "./images/chef.png";
 
 function App() {
   const [open, setOpen] = React.useState(false);
@@ -68,7 +72,7 @@ function App() {
             justifyContent: "center",
           }}
         >
-          {/* top row */}
+          {/* top row ============================================================================*/}
           <div
             style={{
               display: "flex",
@@ -254,9 +258,42 @@ function App() {
                 alt="yap"
               />
             </button>
+            <button
+              onClick={() => {
+                handleOpen("Brandon", "a very joyful presence and lights up the room when he walks in. also great skills in regards to getting the most flavour out of grapes and Cheetos", "Conor");
+              }}
+            >
+              <motion.img
+                whileHover={{ scale: 1.2 }}
+                whileTap={{ scale: 0.9 }}
+                transition={{ type: "spring", stiffness: 400, damping: 17 }}
+                src={Cheeto}
+                style={{
+                  height: "90px",
+                }}
+                alt="cheeto"
+              />
+            </button>
+            <button
+              onClick={() => {
+                handleOpen("Brandon", "he always laughs at my joke (he's a bully though)...LOL happy birthday!", "Angie (aka sona main)");
+              }}
+            >
+              <motion.img
+                whileHover={{ scale: 1.2 }}
+                whileTap={{ scale: 0.9 }}
+                transition={{ type: "spring", stiffness: 400, damping: 17 }}
+                src={Joke}
+                style={{
+                  height: "90px",
+                }}
+                alt="joke"
+              />
+            </button>
           </div>
+         
 
-          {/* middle row */}
+          {/* middle row  ========================================================================*/}
           <div
             style={{
               display: "flex",
@@ -295,7 +332,8 @@ function App() {
             />
           </div>
 
-          {/* bottom row */}
+
+          {/* bottom row =========================================================================*/}
           <div
             style={{
               display: "flex",
@@ -485,10 +523,45 @@ function App() {
                 alt="trust"
               />
             </button>
+
+            <button
+              onClick={() => {
+                handleOpen("Dennis", "quite possibly the soothest guy in the office", "Conor");
+              }}
+            >
+              {" "}
+              <motion.img
+                whileHover={{ scale: 1.2 }}
+                whileTap={{ scale: 0.9 }}
+                transition={{ type: "spring", stiffness: 400, damping: 17 }}
+                src={Soothe}
+                style={{
+                  height: "90px",
+                }}
+                alt="soothe"
+              />
+            </button>
+            <button
+              onClick={() => {
+                handleOpen("Dennis", "he's so chill and he's a chef, he never cooks for us so i wouldn't know if he's lying or not anyways happy birthday!", "Angie");
+              }}
+            >
+              {" "}
+              <motion.img
+                whileHover={{ scale: 1.2 }}
+                whileTap={{ scale: 0.9 }}
+                transition={{ type: "spring", stiffness: 400, damping: 17 }}
+                src={Chef}
+                style={{
+                  height: "90px",
+                }}
+                alt="chef"
+              />
+            </button>
           </div>
         </div>
 
-        {/* show popup */}
+        {/* show popup ===========================================================================*/}
         {open && (
           <div
             style={{
